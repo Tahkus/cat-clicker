@@ -1,0 +1,63 @@
+body {
+  	width: 100%;
+    font-family: Avant Garde, Futura, Calibri;
+    background-color: #e7e8db85; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Title section */
+
+.title {
+    text-align: center;
+}
+
+/* Thumbnail section */
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.cat-thumb {
+    text-align: center;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 20px 10px;
+}
+
+.thumbnail:hover {
+  	cursor: pointer;
+    filter: opacity(0.4);
+}
+
+/* Display section */
+
+.display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.big-cat {
+    text-align: center;
+    justify-content: center;
+}
+
+.cat-display {
+    width: 60%;
+}
+
+.cat-display:hover {
+    cursor: pointer;
+}
