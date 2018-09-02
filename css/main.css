@@ -44,7 +44,6 @@ body {
 /* Display section */
 
 .display {
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -52,12 +51,9 @@ body {
 .big-cat {
     text-align: center;
     justify-content: center;
-}
-
-.cat-display {
     width: 60%;
 }
 
-.cat-display:hover {
+.big-cat:hover {
     cursor: pointer;
 }
