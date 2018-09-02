@@ -61,7 +61,7 @@ var octopus = {
 
 	updateClicks: function() {
 		model.activeCat.clicks++;
-		displayView.init();
+		displayView.render();
 	}
 };
 // * VIEW *
@@ -107,7 +107,7 @@ var displayView = {
 		let displayCat = octopus.getActiveCat();
 		this.catPic.src = displayCat.source;
 		this.catName.textContent = displayCat.name;
-		this.catCounter.textContent = 'This cat has received ' + displayCat.clicks + ' pets.';
+		this.catCounter.innerHTML = '<h3>This cat has received ' + displayCat.clicks + ' pets.</h3>';
 	}
 };
 
