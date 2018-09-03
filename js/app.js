@@ -82,7 +82,7 @@ var thumbView = {
 			catThumb.addEventListener('click', (function(catCopy) {
 				return function() {
 					octopus.setActiveCat(catCopy);
-					displayView.init();
+					displayView.render();
 				};
 			})(cat));
 		}
