@@ -64,16 +64,18 @@ body {
 .popup {
     position: absolute;
     text-align: left;
-    top: 80%;
-    background-color: #e09e1985;
+    top: 68%;
+    background-color: #ece3dbbf;
     padding: 20px;
     visibility: hidden;
+    width: 350px;
+    left: 50%;
+    margin-left: -175px;
 }
 
 .popup.show {
     visibility: visible;
 }
-
 
 input {
     height: 20px;
@@ -83,6 +85,10 @@ input {
 button {
     font-family: Avant Garde, Futura, Calibri;
     font-size: 0.8em;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 
