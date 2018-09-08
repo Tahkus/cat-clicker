@@ -97,6 +97,7 @@ var thumbView = {
 				return function() {
 					octopus.setActiveCat(catCopy);
 					displayView.render();
+					admin.render();
 				};
 			})(cat));
 		}
