@@ -2,12 +2,14 @@ body {
   	width: 100%;
     font-family: Avant Garde, Futura, Calibri;
     background-color: #e7e8db85; 
+    font-size: 18px;
+    align-items: center;
 }
 
 .container {
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 }
 
 /* Title section */
@@ -57,3 +59,33 @@ body {
 .big-cat:hover {
     cursor: pointer;
 }
+
+/* Admin Popup */
+
+.popup {
+    position: absolute;
+    text-align: left;
+    top: 80%;
+    background-color: #e09e1985;
+    padding: 20px;
+    visibility: hidden;
+}
+
+.popup.show {
+    visibility: visible;
+}
+
+
+input {
+    height: 20px;
+    width: 300px;
+}
+
+button {
+    font-family: Avant Garde, Futura, Calibri;
+    font-size: 0.8em;
+}
+
+
+
+

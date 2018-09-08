@@ -45,6 +45,7 @@ var octopus = {
 		model.activeCat = model.cats[0];
 		thumbView.init();
 		displayView.init();
+		admin.init();
 	},
 
 	getActiveCat: function() {
@@ -61,6 +62,19 @@ var octopus = {
 
 	updateClicks: function() {
 		model.activeCat.clicks++;
+		displayView.render();
+	},
+
+	newInfo: function() {
+		if (admin.nameInput.value !== "") {
+			model.activeCat.name = admin.nameInput.value;
+		}
+		if (admin.urlInput.value !== "") {
+			model.activeCat.source = admin.urlInput.value;
+		}
+		if (admin.clicksInput.value !== "") {
+			model.activeCat.clicks = admin.clicksInput.value;
+		}
 		displayView.render();
 	}
 };
@@ -110,6 +124,41 @@ var displayView = {
 		this.catCounter.innerHTML = '<h3>This cat has received ' + displayCat.clicks + ' pets.</h3>';
 	}
 };
+
+var admin = {
+
+	init: function() {
+		this.adminBttn = document.querySelector('.admin-bttn');
+		this.cancel = document.querySelector('.cancel');
+		this.save = document.querySelector('.save');
+		let popup = document.querySelector('.popup');
+		//Event listener to show admin popup when button is clicked
+		this.adminBttn.addEventListener('click', function() {
+			popup.classList.toggle('show');
+		});
+		this.cancel.addEventListener('click', function() {
+			popup.classList.remove('show');
+		});
+		this.save.addEventListener('click', function() {
+			octopus.newInfo();
+			popup.classList.remove('show');
+		})
+		this.render();
+	},
+
+	render: function() {
+		const currentCat = octopus.getActiveCat();
+		this.nameInput = document.getElementById('name');
+		this.urlInput = document.getElementById('url');
+		this.clicksInput = document.getElementById('clicks');
+
+		this.nameInput.placeholder = currentCat.name;
+		this.urlInput.placeholder = currentCat.source;
+		this.clicksInput.placeholder = currentCat.clicks;
+	}
+
+};
+
 
 octopus.init();
 
