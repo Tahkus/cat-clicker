@@ -65,6 +65,7 @@ var octopus = {
 		displayView.render();
 	},
 
+	// Update data with new input from admin popup and display
 	newInfo: function() {
 		if (admin.nameInput.value !== "") {
 			model.activeCat.name = admin.nameInput.value;
@@ -79,8 +80,7 @@ var octopus = {
 	}
 };
 // * VIEW *
-// Create thumbnail elements on page, display when clicked, and update counter
-// when displayed cat is clicked.
+// Create thumbnail elements on page with event listener to change displayed cat when thumbnail is clicked.
 
 var thumbView = {
 
@@ -104,6 +104,7 @@ var thumbView = {
 	}
 };
 
+// Display selected cat with info displayed and event listener for updating clicks.
 var displayView = {
 
 	init: function() {
@@ -126,6 +127,7 @@ var displayView = {
 	}
 };
 
+// Create event listeners for showing admin popup and add placeholders in input fields
 var admin = {
 
 	init: function() {
